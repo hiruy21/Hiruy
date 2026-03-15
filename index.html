@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiruy Portfolio</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7f6;
+            text-align: center;
+            margin: 0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #1a252f;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        nav a:hover { 
+            color: #3498db; 
+        }
+
+        /* Header Area */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        header img {
+            border-radius: 25%;
+            width: 140px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #3498db;
+            margin-bottom: 15px;
+        }
+
+        header h1 { margin: 10px 0; font-size: 2.2em; }
+        header h3 { margin-bottom: 20px; font-weight: 300; color: #bdc3c7; }
+
+        /* CV Button Styling */
+        .download-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .download-btn:hover {
+            background-color: transparent;
+            border-color: #3498db;
+            color: #3498db;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none; /* Hidden by default */
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Tags */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            background: #ecf0f1;
+            margin: 8px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Inside your <style> tags */
+.gallery-grid {
+    display: grid;
+    /* minmax(250px...) controls how wide the images are before wrapping to a new row */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;       /* This makes the image fill the grid column */
+    height: 450px;     /* CHANGE THIS to adjust the height (e.g., 200px, 300px, 400px) */
+    object-fit: cover; /* This is vital: it clips the image so it doesn't look stretched */
+    border-radius: 20px;
+    transition: transform 0.5s;
+}
+
+.gallery-grid img:hover { 
+    transform: scale(1.05); 
+}
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="profile.jpg" alt="Hiruy Andualem Bishaw">
+    <h1>Hiruy Andualem Bishaw</h1>
+    <h3><strong>
+        Information Technology Professional
+    </strong ></h3>
+    <a href="Hiruy_CV.pdf" download="Hiruy_Andualem_CV" class="download-btn">Download CV</a>
+</header>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About Me</a>
+    <a onclick="showSection('skills')">Skills</a>
+    <a onclick="showSection('gallery')">Gallery</a>
+    <a onclick="showSection('contact')">Contact</a>
+</nav>
+<section id="home" class="content-section active">
+    <h2>Welcome</h2>
+    <p>Welcome to my professional portfolio.I am Hiruy Andualem. My passionate is about technology, and solving computer system issues. I enjoy by learning from others, reading books and helping people by either technical problems or anything what I can or able. </p>
+    <p>Click the links to refer more about me and also refe the attached file by download Curriculum Vitea (CV).</p>
+</section>
+
+<section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>I am an Information Technology graduated from Assosa University in Aug 2014 E.C / 2022 G.C.</p>
+    <p>I have a proven track in computer troubleshooting, networking, software and IT technical support. I am passionate about solving complex technical challenges and keeping up with technologies.</p>
+    <p><strong>Education:</strong> BSc Degree in Information Technology From Assosa University</p>
+</section>
+
+<section id="skills" class="content-section">
+    <h2>My skills</h2>
+    <ul class="skills-list">
+        <li>Technical Support</li>
+        <li>Team Work</li>
+        <li>Communication</li>
+        <li> HNS</li>
+        <li>MS Office</li>
+<li>working under pressure</li>
+    </ul>
+</section>
+
+<section id="gallery" class="content-section">
+    <h2>Work Gallery</h2>
+    <div class="gallery-grid">
+        <img src="Tele1.jpg" alt="Technical Work 2">
+        <img src="s3.jpg" alt="in POESSA Company ">
+        <img src="grad.jpg" alt="Technical Work 2">
+        <img src="gra.jpg" alt="Technical Work 3">
+    </div>
+</section>
+
+<section id="contact" class="content-section">
+    <h2>Contacts</h2>
+    <p><strong>Email:</strong> <a href="mailto:hiruyandualem@gmail.com" style="color: #3498db;">hiruyandualem@gmail.com</a></p>
+    <p><strong>Phone:</strong> +251922292383</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/public-profile/settings/" target="_blank" style="color: #3498db;">View Profile</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Hiruy Andualem Bishaw <datalist>
+        
+    </datalist></p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        let sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show selected section
+        document.getElementById(sectionId).classList.add('active');
+
+        // Optional: Smooth scroll to content on mobile
+        if(window.innerWidth < 768) {
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+    }
+</script>
+
+</body>
+</html>
